@@ -75,7 +75,7 @@ void Grab_Skin( s_texture_t *ptexture )
 	size_t new_height = 0;
 	bool transparent = FBitSet(ptexture->flags, STUDIO_NF_MASKED) && FBitSet(pic->flags, IMAGE_HAS_8BIT_ALPHA);
 
-	if (store_uv_coords)
+	if (store_uv_coords || g_noclampsize)
 	{
 		// keep behavior as it is, this is disscussionable topic
 		new_width = Q_min(pic->width, MIP_MAXWIDTH);

@@ -5361,6 +5361,10 @@ void ParseScript( void )
 		{
 			MsgDev( D_REPORT, "^3$cliptotextures^7 flag is redundant, compiler does not texture clipping by default\n" );
 		}
+		else if( !Q_stricmp( token, "$noclampsize" ))
+		{
+			g_noclampsize = 1;
+		}
 		else if( !Q_stricmp( token, "$mergecontrollers" ))
 		{
 			g_mergebonecontrollers =  1;
@@ -5537,6 +5541,7 @@ int main( int argc, char **argv )
 	g_multistagegraph = 0;
 	allow_boneweights = 0;
 	has_boneweights = 0;
+	g_noclampsize = 0;
 	g_gamma = 1.8f;
 	g_alpha_threshold = 0.5f;
 	clip_texcoords = true;

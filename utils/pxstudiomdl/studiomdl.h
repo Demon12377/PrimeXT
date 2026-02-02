@@ -68,6 +68,7 @@ EXTERN	bool	g_definebones;
 EXTERN	bool	g_overridebones;
 EXTERN	bool	g_centerstaticprop;
 EXTERN	bool	g_staticprop;
+EXTERN	bool	g_noclampsize;
 EXTERN	float	g_gamma;
 extern CUtlArray< char > g_KeyValueText;
 
