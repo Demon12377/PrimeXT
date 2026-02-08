@@ -4074,6 +4074,14 @@ void Cmd_TexRenderMode( void )
 	{
 		g_texture[i].flags |= STUDIO_NF_TWOSIDE;
 	}
+	else if( !Q_stricmp( token, "chrome" ))
+	{
+		g_texture[i].flags |= STUDIO_NF_CHROME;
+	}
+	else if( !Q_stricmp( token, "flatshade" ))
+	{
+		g_texture[i].flags |= STUDIO_NF_FLATSHADE;
+	}
 	else MsgDev( D_WARN, "Texture '%s' has unknown render mode '%s'!\n", g_texture[i].name, token );
 }
 
